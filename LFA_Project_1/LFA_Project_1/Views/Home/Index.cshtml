@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+<body>
+    <h1>String Pattern Validation</h1>
+    <form action="@Url.Action("Index")" method="post">
+        <label for="InputString">String:</label>
+        <input type="text" id="InputString" name="inputString">
+
+        <label for="Pattern">Pattern:</label>
+        <input type="text" id="Pattern" name="pattern">
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="result">
+        @if (ViewData["Result"] != null)
+        {
+            <p>@ViewData["Result"]</p>
+        }
+    </div>
+
+</body>
